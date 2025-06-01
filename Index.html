@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>بطاقة هوية طبية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+    
+
+    .container {
+      max-width: 900px;
+      background: rgba(43, 29, 4, 0.9);
+      padding: 40px 50px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px #d4af37;
+      border: 6px double #d4af37;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* إضافة زخارف هندسية فرعونية حول الحواف */
+    .container::before,
+    .container::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border: 4px solid #d4af37;
+      border-radius: 0 25px 0 25px;
+      box-shadow: 0 0 15px #d4af37;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      transform: rotate(45deg);
+      opacity: 0.4;
+    }
+
+    .container::after {
+      top: auto;
+      bottom: 10px;
+      left: auto;
+      right: 10px;
+      transform: rotate(-45deg);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Amiri', serif;
+      text-align: center;
+      color: #d4af37;
+      text-shadow:
+        1px 1px 0 #8b6f3f,
+        2px 2px 5px #6f5a1c;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    /* خطوط زخرفية فوق وتحت العناوين */
+    h1::before,
+    h1::after,
+    h2::before,
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #d4af37;
+      margin: 8px auto 12px;
+      border-radius: 5px;
+      box-shadow: 0 0 6px #d4af37;
+    }
+
+    h1::after,
+    h2::after {
+      width: 40px;
+      height: 3px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid #d4af37;
+      display: block;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 10px #d4af37;
+      object-fit: cover;
+      background: radial-gradient(circle at center, #d4af37 30%, transparent 70%);
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #f0deb3;
+      padding: 6px 0;
+      border-bottom: 1px dotted #8b6f3f;
+    }
+
+    .label {
+      font-weight: 700;
+      color: #f4a261;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .emergency {
+      background: #4f4526cc;
+      border: 2px solid #d88;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #d88;
+      font-weight: bold;
+      color: #ffdbdb;
+    }
+
+    .note-box {
+      background: #3a2f1d;
+      border: 2px solid #d4af37;
+      padding: 20px;
+      border-radius: 15px;
+      font-style: italic;
+      box-shadow: 0 0 10px #d4af37;
+      line-height: 1.8;
+      font-size: 1.15rem;
+    }
+
+    .images img {
+      width: 180px;
+      margin: 10px 10px 20px 10px;
+      border: 3px solid #d4af37;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #d4af37;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .images img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ffd700;
+    }
+
+    iframe {
+      width: 100%;
+      height: 520px;
+      border: none;
+      margin-top: 15px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #d4af37;
+      background: #2c2305cc;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="بطاقة الهوية الطبية الفرعونية">
+    <div class="section" style="text-align: center;">
+
+      <img src="https://drive.google.com/thumbnail?id=1oMrUHJUQPl_hpOk9Y8XR7sR2cdUQHeUX" 
+     alt="صورة الشخص" 
+     class="profile-img" />
+
+
+      <h1>إدريس مجدي</h1>
+      <p><span class="label">تاريخ الميلاد:</span> 01/01/1999</p>
+      <p><span class="label">الجنسية:</span> مصري</p>
+    </div>
+
+    <div class="section" aria-labelledby="medical-info-title">
+      <h2 id="medical-info-title">⚕️ المعلومات الطبية</h2>
+      <p><span class="label">فصيلة الدم:</span> O+</p>
+      <p><span class="label">الأمراض المزمنة:</span> سكر، ضغط</p>
+      <p><span class="label">الأدوية:</span> أنسولين، كونكور</p>
+      <p><span class="label">الحساسية:</span> بنسلين</p>
+      <p><span class="label">تاريخ طبي:</span> عملية قلب مفتوح 2021</p>
+    </div>
+
+    <div class="section emergency" aria-labelledby="emergency-contacts-title">
+      <h2 id="emergency-contacts-title">📞 جهات اتصال طوارئ</h2>
+      <p><span class="label">الاسم:</span> ادهم</p>
+      <p><span class="label">العلاقة:</span> أخ</p>
+      <p><span class="label">رقم الهاتف:</span> 01012345678</p>
+      <p><span class="label">الاسم:</span> فاطمة حسن</p>
+      <p><span class="label">العلاقة:</span> أم</p>
+      <p><span class="label">رقم الهاتف:</span> 01087654321</p>
+    </div>
+
+    <div class="section" aria-labelledby="will-section-title">
+      <h2 id="will-section-title">📍 العنوان</h2>
+      <div class="note-box">
+        <p>شارع محمد علي باشا بيت نمرة 11 الدور الخامس.</p>
+      </div>
+    </div>
+
+    <div class="section" aria-labelledby="will-section-title">
+      <h2 id="will-section-title">📜 نبذة / وصية</h2>
+      <div class="note-box">
+        <p>أطلب ممن يعثر عليّ في حالة طوارئ أن يُبلغ عائلتي، وأوصي بالتبرع بأعضائي إن ثبتت الوفاة الدماغية.</p>
+      </div>
+    </div>
+
+    <div class="section" aria-labelledby="medical-images-title">
+      <h2 id="medical-images-title">🩻 صور طبية</h2>
+      <div class="images" role="list">
+
+
+<a href="https://drive.google.com/file/d/1pBKPCnxr-RjiaBPgYJISZL8qkMCimG8u/view" target="_blank">
+  <img src="https://drive.google.com/thumbnail?id=1pBKPCnxr-RjiaBPgYJISZL8qkMCimG8u" alt="أشعة" role="listitem" />
+</a>
+
+
+<a href="https://drive.google.com/file/d/1pIqJWNypjUktIB44BDmI9Q0y_6SSl-wV/view" target="_blank">
+  <img src="https://drive.google.com/thumbnail?id=1pIqJWNypjUktIB44BDmI9Q0y_6SSl-wV" alt="أشعة" role="listitem" />
+</a>
+
+
+<a href="https://drive.google.com/file/d/1pBKPCnxr-RjiaBPgYJISZL8qkMCimG8u/view" target="_blank">
+  <img src="https://drive.google.com/thumbnail?id=1pCvfZ67m8CVSJPJ70fA2jrj3TnpoEO-g" alt="أشعة" role="listitem" />
+</a>
+
+
+    <div class="section" aria-labelledby="pdf-files-title">
+      <h2 id="pdf-files-title">📑 ملفات PDF</h2>
+
+
+<object data="https://drive.google.com/uc?export=download&id=1ov08uNpuCAFyEakRfDRGyN2h5t1B12rK" type="application/pdf" > <p style="color: #ffffff; font-size: 18px; text-align: center;"> Session 1 - 
+<a href="https://drive.google.com/uc?export=download&id=1ozKRdbsU8dJcTPOdl67sXUxZhYLztV8G" style="color: #0066cc; text-decoration: underline;">
+ اظهار/Preview
+</a>
+</p>
+</object>
+
+
+<object data="https://drive.google.com/uc?export=download&id=1p5KkdBim5BB9kVne1z5p3BiQaRCtsn9J" type="application/pdf" > <p style="color: #ffffff; font-size: 18px; text-align: center;"> Pathological Analyses - 
+<a href="https://drive.google.com/uc?export=download&id=1ozKRdbsU8dJcTPOdl67sXUxZhYLztV8G" style="color: #0066cc; text-decoration: underline;">
+ اظهار/Preview 
+</a>
+</p>
+</object>
+
+
+<object 
+    data="https://drive.google.com/uc?export=download&id=1ozKRdbsU8dJcTPOdl67sXUxZhYLztV8G" 
+    type="application/pdf"
+>
+    <p style="color: #ffffff; font-size: 18px; text-align: center;">
+Session - 
+        <a href="https://drive.google.com/uc?export=download&id=1ozKRdbsU8dJcTPOdl67sXUxZhYLztV8G" 
+           style="color: #0066cc; text-decoration: underline;">
+اظهار/Preview
+        </a>
+    </p>
+</object>
+
+
+
+    </div>
+  </div>
+</body>
+</html>
